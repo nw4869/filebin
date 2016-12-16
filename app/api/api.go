@@ -82,7 +82,7 @@ func verifyBin(s string) error {
 		return errors.New("The bin contains invalid characters.")
 	}
 
-	if len(s) < 8 {
+	if len(s) < 1 {
 		return errors.New("The bin is too short.")
 	}
 
@@ -96,7 +96,7 @@ func verifyBin(s string) error {
 func verifyFilename(s string) error {
 	var invalid = regexp.MustCompile("[^A-Za-z0-9-_=,.]")
 	if invalid.MatchString(s) {
-		return errors.New("The filename contains invalid characters.")
+		// return errors.New("The filename contains invalid characters.")
 	}
 
 	if len(s) == 0 {
@@ -111,8 +111,8 @@ func verifyFilename(s string) error {
 }
 
 func sanitizeFilename(s string) string {
-	var invalid = regexp.MustCompile("[^A-Za-z0-9-_=,.]")
-	s = invalid.ReplaceAllString(s, "_")
+	// var invalid = regexp.MustCompile("[^A-Za-z0-9-_=,.]")
+	// s = invalid.ReplaceAllString(s, "_")
 
 	if strings.HasPrefix(s, ".") {
 		s = strings.Replace(s, ".", "_", 1)
@@ -141,7 +141,8 @@ func Upload(w http.ResponseWriter, r *http.Request, cfg config.Configuration, ct
 		}
 	}
 
-	filename := sanitizeFilename(r.Header.Get("filename"))
+	filename, err := url.QueryUnescape(sanitizeFilename(r.Header.Get("filename")))
+	
 	if err := verifyFilename(filename); err != nil {
 		http.Error(w, "Invalid filename", 400)
 		return
