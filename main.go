@@ -17,12 +17,12 @@ import (
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 
-	"github.com/espebra/filebin/app/api"
-	"github.com/espebra/filebin/app/backend/fs"
-	"github.com/espebra/filebin/app/config"
-	"github.com/espebra/filebin/app/events"
-	"github.com/espebra/filebin/app/metrics"
-	"github.com/espebra/filebin/app/model"
+	"github.com/nw4869/filebin/app/api"
+	"github.com/nw4869/filebin/app/backend/fs"
+	"github.com/nw4869/filebin/app/config"
+	"github.com/nw4869/filebin/app/events"
+	"github.com/nw4869/filebin/app/metrics"
+	"github.com/nw4869/filebin/app/model"
 )
 
 var cfg = config.Global

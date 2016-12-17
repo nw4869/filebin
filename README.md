@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/espebra/filebin.svg)](https://travis-ci.org/espebra/filebin)
+[![Build Status](https://travis-ci.org/nw4869/filebin.svg)](https://travis-ci.org/nw4869/filebin)
 
 ![Viewing a bin](doc/screenshot-web-interface-bin.png)
 
@@ -61,8 +61,8 @@ $ export PATH="${PATH}:${GOPATH}/bin"
 Download and install Filebin:
 
 ```bash
-$ go get -d github.com/espebra/filebin
-$ cd ${GOPATH}/src/github.com/espebra/filebin
+$ go get -d github.com/nw4869/filebin
+$ cd ${GOPATH}/src/github.com/nw4869/filebin
 $ make get-deps
 $ make install
 ```

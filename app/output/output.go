@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/espebra/filebin/app/model"
+	"github.com/nw4869/filebin/app/model"
 )
 
 func JSONresponse(w http.ResponseWriter, status int, d interface{}, ctx model.Context) {

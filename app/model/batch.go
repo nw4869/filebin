@@ -1,8 +1,8 @@
 package model
 
 import (
-	"github.com/espebra/filebin/app/backend/fs"
-	"github.com/espebra/filebin/app/shared"
+	"github.com/nw4869/filebin/app/backend/fs"
+	"github.com/nw4869/filebin/app/shared"
 	"math/rand"
 	"time"
 )

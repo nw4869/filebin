@@ -2,10 +2,10 @@ package model
 
 import (
 	"github.com/GeertJohan/go.rice"
-	"github.com/espebra/filebin/app/backend/fs"
-	"github.com/espebra/filebin/app/config"
-	"github.com/espebra/filebin/app/events"
-	"github.com/espebra/filebin/app/metrics"
+	"github.com/nw4869/filebin/app/backend/fs"
+	"github.com/nw4869/filebin/app/config"
+	"github.com/nw4869/filebin/app/events"
+	"github.com/nw4869/filebin/app/metrics"
 	"log"
 )
 
